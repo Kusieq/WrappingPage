@@ -8,7 +8,6 @@ body {
 }
 html{
     scroll-behavior: smooth; 
-    
 }
 
 .wrapper {
@@ -21,9 +20,9 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 8%;
-    min-height: 30px;
-    max-height: 8%;
+    height: 4vw;
+    max-height: 4vw;
+    min-height: 50px;
     background-color: #ba9573;
     z-index: 1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -31,21 +30,33 @@ nav {
 
 .nav-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 60%;
+    justify-content: center; /* Dodajemy centrowanie wzdłuż osi poziomej */
+    margin: 0 auto; /* Wyśrodkowanie elementów na środku poziomo */
 }
 
 .nav-container div {
-    flex-grow: 1; 
+    flex-grow: 1;
     text-align: center; 
 }
 
 .nav-container div a {
-    padding: 1.3vw 1.7vw; 
+    font-family: "Noto Serif", serif;
+    display: inline-block;
+    padding: 1.7% 2%;
     color: #fff;
     text-decoration: none;
-    font-size: min(1.9vh, 1.4vw);
+    font-size: 1vw;
+    width: 8vw; /* Stała szerokość */
+    height: 2.4vw; /* Stała wysokość */
+    line-height: 2.4vw; /* Wyrównujemy tekst w pionie */
+    border-radius: 1vw; 
+    background-color: #ba9573;
+    transition: background-color 0.3s ease;
+    margin-left: 1.6vw;
+    margin-right: 1.6vw;
 }
  
 .nav-container div a:hover {
@@ -55,31 +66,32 @@ nav {
 
 @media only screen and (max-width: 767px) {
     nav {
-        height: 4%; 
-        max-height: 4%; 
+        height: 4vw;
+    max-height: 50px;
+    min-height: 50px;
     }
 
     .nav-container {
-        justify-content: center; 
+        width: 90%;
+        justify-content: space-around;
+        margin: 0 auto;
     }
 
-    .nav-container div {
-        flex-grow: 0; 
-        flex-shrink: 0; 
-    }
     .nav-container div:not(:last-child) {
-        margin-right: 2vw; 
+        margin-right: 2vw;
     }
+
     .nav-container div a {
-        padding: 0.8vw 1vw; 
-        font-size: min(1.5vh, 1.2vw);
+        padding: 0.3vw 0,6vw;
+        width: 10vw; /* Stała szerokość */
+        line-height: 2.5vw; /* Wyrównujemy tekst w pionie */
+        min-height: 2.0vw;
+        font-size: min(1.5vw); /* Minimalna wielkość czcionki 2vw lub 16px */
+        margin-left: 1.6vw;
+        margin-right: 1.6vw;
     }
 
-    .nav-container div a:hover {
-        border-radius: 0.3vw; 
-    }
 }
-
 
 
 .full-width-image {
@@ -90,7 +102,7 @@ nav {
 .full-width-image img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 50vw;
     opacity: 0.6;
 }
 
@@ -99,7 +111,7 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 50vw;
     background-color: #000;
     z-index: -1;
 }
@@ -111,16 +123,19 @@ nav {
     color: white;
     z-index: 2;
     max-width: 90%; 
+    margin-bottom: 5vw;
 }
 
 .image-text h1 {
     font-size: 6vw;
     margin: 0;
+    font-family: "Noto Serif", serif;
 }
 
 .image-text p {
     font-size: 3vw;
     margin: 0;
+    font-family: "Noto Serif", serif;
 }
 
 
@@ -128,8 +143,7 @@ nav {
 
 .icons-container {
     position: relative; 
-    top: 5%;
-    left: 10%; 
+    margin-left: 15%;
     display: flex;
     flex-direction: column;
 }
@@ -143,10 +157,11 @@ nav {
 .icon img {
     width: 6%; 
     height: auto;
-    margin-right: 6%; 
+    margin-right: 4%;  
 }
 
 .icon p {
+    font-family: "Noto Serif", serif;
     max-width: 33%; 
     font-size: 1.3vw; 
     word-wrap: break-word; 
@@ -155,25 +170,32 @@ nav {
 .big-image {
     position: absolute;
     top: 5%;
-    right: 5%;
+    right: 1%;
     width: 30vw; 
     max-width: 33%;
-    margin-right: 10%;
+    margin-right: 15%;
     z-index: -1;
 }
 
 .big-image img {
-    width: 100%; 
-    height: auto; 
+    width: 80%; 
+    height: auto;
+    border-radius: 10px;
+    margin-left: 10%;
 }
 
 .offer-description {
+    font-family: "Noto Serif", serif;
+    scroll-margin-top: 5vw;
     position: relative;
     color: #000; 
     font-size: 2vw; 
-    margin-top: 10%; 
-    margin-left: 10%; 
+    margin-top: 5%; 
+    margin-bottom: 2%;
+    margin-left: 20%; 
 }
+
+
 
 
 
@@ -196,50 +218,57 @@ nav {
 
 .left-content {
     flex: 1;
-    margin-left: 8%
+    margin-left: 14%;
+    margin-top: 10%;
 }
 
 .left-content img {
-    margin-top: 10%;
-    width: 120%;
-    height: 90%;
+    width: 100%; 
+    height: auto;
+    border-radius: 10px;
 }
 
 .right-content {
     flex: 2;
     padding: 0 2%;
     margin-left: 8%;
+    margin-right: 15%;
 }
 
 .right-content p {
-    color: #000;
+    font-family: "Noto Serif", serif;
+    color: #fff;
     font-size: 1.3vw;
     line-height: 1.6;
     word-wrap: break-word;
     max-width: 110%;
-    margin-right: 10%;
 }
 .right-content h2{
+    font-family: "Noto Serif", serif;
     font-size: 3vw;
-    color: #000;
+    color: #fff;
+    margin-left: 7%;
 }
 
 
 
 
 .pricing {
+    scroll-margin-top: 5vw;
     margin-top: 7%;
     text-align: center;
     margin-bottom: 7%;
 }
 
 .pricing h2 {
+    font-family: "Noto Serif", serif;
     font-size: 3vw;
     margin-right: 10%;
     margin-left: 10%;
 }
 
 .pricing p {
+    font-family: "Noto Serif", serif;
     font-size: 1.2vw;
     text-align: center;
     color: black;
@@ -261,24 +290,25 @@ nav {
     width: 30%; 
     max-width: 350px; 
     background-color: #BA9573;
-    border: 1px solid #ccc;
     border-radius: 10px;
     font-size: 1.3vw;
+    background: linear-gradient(to bottom, #D0C1A9, #BA9573); /* Gradient tła */
 }
 
 .pricing-header {
     background-color: #D0C1A9;
     padding: 1.5%;
-    border-bottom: 1px solid #ccc;
-    border-radius: 7px;
+    border-radius: 10px 10px 0 0;
 }
 
 .pricing-body {
+    font-family: "Noto Serif", serif;
     padding: 3%;
     font-size: 1.2vw;
 }
 
 .pricing-body p {
+    font-family: "Noto Serif", serif;
     font-size: 1.2vw;
 }
 
@@ -301,52 +331,58 @@ nav {
     color: white;
     padding: 20px;
     align-items: center;
+    scroll-margin-top: 70px;
 }
 
 .brown-rectangleContact h2 {
+    font-family: "Noto Serif", serif;
     text-align: center;
-    font-size: 3vw;
-}
-
-.formulaH2{
-    margin-top: 5%;
+    font-size: 2.5vw;
 }
 
 .contact-info {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
+    margin-top: 0px; /* Reduced margin-top */
+    margin-bottom: 4vh;
 }
 
 .contact-info div {
     text-align: center;
-}
-
-.contact-info img {
-    width: 50px; 
-    height: auto;
-    margin-bottom: 20px;
+    justify-content: center;
 }
 
 .contact-info p {
-    color: #000;
+    font-family: "Noto Serif", serif;
+    color: white;
     margin: 0;
     font-size: 1.5vw;
     font-weight: bold;
+    padding-left: 3vw; /* Added padding-top to ensure some spacing */
+    padding-right: 4vw; /* Added padding-top to ensure some spacing */
 }
 
-.contact-info-ph p:first-child {
-    font-weight: bold;
+.contact-info .iconPh {
+    width: 3.8vw;  /* Adjusted to be responsive */
+    height: auto;
+    margin-bottom: 1.5vh;  /* Reduced margin-bottom */
+    margin-right: 1vw;
+}
+.contact-info .iconMl {
+    width: 4vw;  /* Adjusted to be responsive */
+    height: auto;
+    margin-bottom: 1.5vh;  /* Reduced margin-bottom */
+    margin-right: 0.9vw;
+}
+.contact-info .iconFb {
+    width: 4vw;  /* Adjusted to be responsive */
+    height: auto;
+    margin-bottom: 1.5vh;  /* Reduced margin-bottom */
+    margin-right: 0.85vw;
 }
 
-.contact-info-fb p:first-child {
-    font-weight: bold;
-}
 
-.contact-info-ml p:first-child {
-    font-weight: bold;
-}
 
 .form-container form {
     display: flex;
@@ -359,6 +395,7 @@ nav {
 .form-container input,
 .form-container textarea,
 .form-container button {
+    font-family: "Noto Serif", serif;
     align-items: center;
     margin-left: 30%;
     margin-right: 30%;
@@ -374,6 +411,7 @@ nav {
     padding-bottom: 10%; 
 }
 .form-container button {
+    font-family: "Noto Serif", serif;
     padding: 1% 2%;
     background-color: #BA9573;
     color: white;
@@ -390,4 +428,9 @@ nav {
     padding: 20px 0; 
     bottom: 0; 
     width: 100%; 
+}
+
+.footer p {
+    font-family: "Noto Serif", serif;
+    font-size: 1vw;
 }
